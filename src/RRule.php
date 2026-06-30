@@ -770,7 +770,7 @@ class RRule implements RRuleInterface
 	{
 		$date = self::parseDate($date);
 		// convert timezone to dtstart timezone for comparison
-		$date->setTimezone($this->dtstart->getTimezone());
+		$date = $date->setTimezone($this->dtstart->getTimezone());
 
 		if (in_array($date, $this->cache)) {
 			// in the cache (whether cache is complete or not)
